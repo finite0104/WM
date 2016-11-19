@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:orientation="vertical"
+              android:layout_width="fill_parent"
+              android:layout_height="fill_parent"
+        >
+    <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/app_description"
+            android:layout_gravity="center"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="20dp"
+            android:textSize="18sp"
+            android:minLines="2"
+            android:singleLine="false"
+            />
+    
+    <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:orientation="horizontal">
+	    <Button
+	            android:layout_width="wrap_content"
+	            android:layout_height="wrap_content"
+	            android:text="@string/start_button"
+	            android:id="@+id/speechbutton" android:layout_gravity="center"/>
+	    <Button
+	            android:layout_width="wrap_content"
+	            android:layout_height="wrap_content"
+	            android:text="@string/ui_button"
+	            android:layout_marginLeft="30dp"
+	            android:id="@+id/uibutton" android:layout_gravity="center"/>
+	    <requestFocus />
+	</LinearLayout>
+	
+    <LinearLayout
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+	        android:layout_marginTop="16dp"
+	        android:orientation="horizontal">
+
+	    <Button
+	            android:layout_width="wrap_content"
+	            android:layout_height="wrap_content"
+	            android:text="@string/cancel_button"
+	            android:id="@+id/cancelbutton" />
+	    <Button
+	            android:layout_width="wrap_content"
+	            android:layout_height="wrap_content"
+	            android:text="@string/stop_button"
+	            android:layout_marginLeft="30dp"
+	            android:id="@+id/stopbutton" />
+	    <Button
+	            android:layout_width="wrap_content"
+	            android:layout_height="wrap_content"
+	            android:text="@string/restart_button"
+	            android:layout_marginLeft="30dp"
+	            android:id="@+id/restartbutton" />
+    </LinearLayout>
+    
+    <EditText 
+	        android:layout_width="fill_parent"
+	        android:layout_height="80dp"
+            android:minLines="3"
+	        android:layout_marginTop="16dp"
+	        android:inputType="textMultiLine"
+	        android:text="@string/initial_words" android:id="@+id/words_edit"
+        />
+
+    <RadioGroup
+            android:id="@+id/service_group"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="16dp"
+            android:orientation="horizontal">
+
+        <RadioButton
+                android:id="@+id/web"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:checked="true"
+                android:text="@string/radio_web" />
+
+        <RadioButton
+                android:id="@+id/dictation"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/radio_dictation" />
+
+        <RadioButton
+                android:id="@+id/local"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/radio_local" />
+
+        <RadioButton
+                android:id="@+id/word"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/radio_word" />
+        
+    </RadioGroup>
+    
+	<Button
+	    android:layout_width="200dp"
+	    android:layout_height="wrap_content"
+	    android:layout_marginTop="16dp"
+	    android:text="@string/tts_button"
+	    android:layout_gravity="center_horizontal"
+	    android:id="@+id/ttsbutton" />
+</LinearLayout>
+

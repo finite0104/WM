@@ -1,0 +1,161 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".TextToSpeechActivity" >
+
+    <TextView
+        android:id="@+id/textViewStatus"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="문장을 입력하고 아래 이미지 버튼을 눌러주세요." />
+
+    <EditText
+        android:id="@+id/editTextTTS"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/textViewStatus"
+        android:layout_below="@+id/textViewStatus"
+        android:layout_marginTop="46dp"
+        android:ems="10"
+        android:text="안녕하세요"
+        android:inputType="textMultiLine" />
+
+    <ImageButton
+        android:id="@+id/imageButtonStart"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="30dp"
+        android:background="@android:color/transparent"
+        android:contentDescription="음성으로 말하기"
+        android:src="@drawable/speak_icon1" />
+
+    <LinearLayout
+        android:id="@+id/modeSelectWrap"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_below="@id/editTextTTS"
+        android:layout_marginTop="10dp"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp">
+
+        <TextView
+            android:id="@+id/modeSelectTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/mode_select_title" />
+
+        <Spinner
+            android:id="@+id/spinnerMode"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="20dp"/>
+    </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/voiceSelectWrap"
+        android:layout_below="@id/modeSelectWrap"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp">
+
+        <TextView
+            android:id="@+id/voiceSelectTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/voice_select_title" />
+
+        <RadioGroup
+            android:id="@+id/voiceRadioGroup"
+            android:layout_below="@id/voiceSelectTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginTop="10dp"
+            android:paddingLeft="20dp"
+            android:paddingRight="20dp">
+
+            <RadioButton
+                android:id="@+id/voiceWomanReadCalm"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/woman_read_calm"
+                android:padding="12dp"/>
+            <RadioButton
+                android:id="@+id/voiceManReadCalm"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/man_read_calm"
+                android:padding="12dp" />
+            <RadioButton
+                android:id="@+id/voiceWomanDialogBright"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/woman_dialog_bright"
+                android:padding="12dp"
+                android:checked="true"/>
+            <RadioButton
+                android:id="@+id/voiceManDialogBright"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/man_dialog_bright"
+                android:padding="12dp" />
+        </RadioGroup>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/speedSelectWrap"
+        android:layout_below="@id/voiceSelectWrap"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp">
+
+        <TextView
+            android:id="@+id/speedSelectTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/speed_select_title" />
+
+        <RadioGroup
+            android:id="@+id/speedRadioGroup"
+            android:layout_below="@id/speedSelectTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="10dp">
+
+            <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/speed05x"
+                android:text="0.5x"
+                android:padding="12dp"/>
+            <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/speed10x"
+                android:text="1.0x"
+                android:padding="12dp"
+                android:checked="true" />
+            <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/speed20x"
+                android:text="2.0x"
+                android:padding="12dp" />
+        </RadioGroup>
+
+    </RelativeLayout>
+
+
+
+</RelativeLayout>
