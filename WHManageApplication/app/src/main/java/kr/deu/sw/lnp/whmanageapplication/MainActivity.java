@@ -6,17 +6,28 @@ import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
+import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.Button;
 import android.widget.Toast;
 
-public class MainActivity extends AppCompatActivity {
+import net.daum.mf.speech.api.SpeechRecognizeListener;
+import net.daum.mf.speech.api.SpeechRecognizerClient;
+import net.daum.mf.speech.api.SpeechRecognizerManager;
+
+import java.util.ArrayList;
+
+public class MainActivity extends AppCompatActivity implements SpeechRecognizeListener{
     //메인화면
 
     private final static int WAREHOUSING_REQUEST = 0;
     private final static int UNSTORING_REQUEST = 1;
-
+    String apikey;
+    Button b_warehousing,b_unstoring,b_search,b_setting;
+    SpeechRecognizerClient client;
+    SpeechRecognizerClient.Builder builder;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -32,6 +43,18 @@ public class MainActivity extends AppCompatActivity {
                         .setAction("Action", null).show();
             }
         });
+
+        b_warehousing = (Button)findViewById(R.id.b_warehousing);
+        b_unstoring = (Button)findViewById(R.id.b_unstoring);
+        b_search = (Button)findViewById(R.id.b_search);
+        b_setting = (Button)findViewById(R.id.b_setting);
+
+        SpeechRecognizerManager.getInstance().initializeLibrary(this);
+        apikey = "516d3c46cd3d6cccf477091a2c5068d1";
+        builder = new SpeechRecognizerClient.Builder().setApiKey(apikey).setServiceType(SpeechRecognizerClient.SERVICE_TYPE_WEB);
+        client = builder.build();
+        client.setSpeechRecognizeListener(this);
+        client.startRecording(true);
     }
 
     public void onClick(View v){
@@ -41,22 +64,26 @@ public class MainActivity extends AppCompatActivity {
                 Intent ware_Intent = new Intent("com.google.zxing.client.android.SCAN");
                 ware_Intent.putExtra("SCAN_MODE", "ALL");
                 startActivityForResult(ware_Intent, WAREHOUSING_REQUEST);
+                client.cancelRecording();
                 break;
             case R.id.b_unstoring :
                 //출고
                 Intent unsto_Intent = new Intent("com.google.zxing.client.android.SCAN");
                 unsto_Intent.putExtra("SCAN)MODE","ALL");
                 startActivityForResult(unsto_Intent, UNSTORING_REQUEST);
+                client.cancelRecording();
                 break;
             case R.id.b_search :
                 //검색
                 Intent info_Intent = new Intent(this, InfoActivity.class);
                 startActivity(info_Intent);
+                client.cancelRecording();
                 break;
             case R.id.b_setting :
                 //설정
                 Intent setting_Intent = new Intent(this, SettingsActivity.class);
                 startActivity(setting_Intent);
+                client.cancelRecording();
                 break;
         }
     }
@@ -107,5 +134,68 @@ public class MainActivity extends AppCompatActivity {
         }
 
         return super.onOptionsItemSelected(item);
+    }
+
+    public void onDestroy() {
+        super.onDestroy();
+
+        SpeechRecognizerManager.getInstance().finalizeLibrary();
+    }
+
+    @Override
+    public void onReady() {
+
+    }
+
+    @Override
+    public void onBeginningOfSpeech() {
+
+    }
+
+    @Override
+    public void onEndOfSpeech() {
+
+    }
+
+    @Override
+    public void onError(int i, String s) {
+        Log.d("Error",s);
+    }
+
+    @Override
+    public void onPartialResult(String s) {
+
+    }
+
+    @Override
+    public void onResults(Bundle bundle) {
+        ArrayList<String> texts =bundle.getStringArrayList(SpeechRecognizerClient.KEY_RECOGNITION_RESULTS);
+
+        if(texts.get(1).equals("입고")||texts.get(1).equals("입구")){
+            b_warehousing.performClick();
+            client.cancelRecording();
+        }
+        if(texts.get(1).equals("출고")) {
+            b_unstoring.performClick();
+            client.cancelRecording();
+        }
+        if(texts.get(1).equals("재고")) {
+            b_search.performClick();
+            client.cancelRecording();
+        }
+        if(texts.get(1).equals("설정")) {
+            b_setting.performClick();
+            client.cancelRecording();
+        }
+    }
+
+    @Override
+    public void onAudioLevel(float v) {
+
+    }
+
+    @Override
+    public void onFinished() {
+
     }
 }

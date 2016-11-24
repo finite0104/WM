@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<items version="2" >
+
+    <item
+        is-multidex="true"
+        jar="/Users/sang/Desktop/WM/WHManageApplication/app/build/intermediates/exploded-aar/com.android.support/support-vector-drawable/23.4.0/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="c2c594cace5d83a3227b2b6e658ecbfd586d3ed9">
+        <dex dex="/Users/sang/Desktop/WM/WHManageApplication/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-support-vector-drawable-23.4.0_99802e64ed4fe7c5b8bec931e5390b6e10d463d9/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/sang/Desktop/WM/WHManageApplication/app/build/intermediates/exploded-aar/com.android.support/recyclerview-v7/23.4.0/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="ec75036c3c52e451d0cde50a5aedaf5fd32354a0">
+        <dex dex="/Users/sang/Desktop/WM/WHManageApplication/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-recyclerview-v7-23.4.0_f5b2d9703239c762f5ca5da6ef728860f6fd14b9/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/sang/Desktop/WM/WHManageApplication/app/build/intermediates/exploded-aar/WHManageApplication/daum-speech-openapi-4.0/unspecified/jars/libs/dialoid-apklib-0.9.2.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="995013ca31e478180e74ae574ac92a3f487baca3">
+        <dex dex="/Users/sang/Desktop/WM/WHManageApplication/app/build/intermediates/transforms/dex/debug/folders/1000/8/dialoid-apklib-0.9.2_15bb05ac3ffc0b035a7c5ece7fdfea06b09b82d3/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/sang/Desktop/WM/WHManageApplication/app/build/intermediates/exploded-aar/com.android.support/support-v4/23.4.0/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="67bd36ee9340ec7c254108936ad16b24bed160cc">
+        <dex dex="/Users/sang/Desktop/WM/WHManageApplication/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-support-v4-23.4.0_f809eef881c7182febda610908d685f4f6328f4d/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/sang/Desktop/WM/WHManageApplication/app/build/intermediates/incremental-runtime-classes/debug/instant-run.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="3be5c90bfa91e6d24dfd4717cf43255ea045f919">
+        <dex dex="/Users/sang/Desktop/WM/WHManageApplication/app/build/intermediates/transforms/dex/debug/folders/1000/10/instant-run_77b31b003cf5adc379b7d86bac7a927b94d8557f/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/sang/Desktop/WM/WHManageApplication/app/build/intermediates/incremental-classes/debug/instant-run-bootstrap.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="87076d97c5fc0da18d9e7baba088fabc5bbed4ff">
+        <dex dex="/Users/sang/Desktop/WM/WHManageApplication/app/build/intermediates/transforms/dex/debug/folders/1000/10/instant-run-bootstrap_9ad638e474cff90d869f96a9ea1ba787bf36500c/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/sang/Desktop/WM/WHManageApplication/app/libs/core-3.3.0.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="73c49077166faa4c3c0059c5f583d1d7bd1475fe">
+        <dex dex="/Users/sang/Desktop/WM/WHManageApplication/app/build/intermediates/transforms/dex/debug/folders/1000/2/core-3.3.0_1ea0e509c7726a2384c0e1df8cab3971a89c181e/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/sang/Desktop/WM/WHManageApplication/app/build/intermediates/exploded-aar/com.android.support/design/23.4.0/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="5326d9a850d491714fef8cbfaa9ea3416f0bf0d2">
+        <dex dex="/Users/sang/Desktop/WM/WHManageApplication/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-design-23.4.0_0988a0006e6eb3654775dd4870d3d0be2f3637a0/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/sang/Desktop/WM/WHManageApplication/app/build/intermediates/exploded-aar/com.android.support/animated-vector-drawable/23.4.0/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="de4db3785756bfb0915a9f59a9b3f2fea7407be4">
+        <dex dex="/Users/sang/Desktop/WM/WHManageApplication/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-animated-vector-drawable-23.4.0_ee513da80a3364db8a51c25d04a351086e689d1c/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/sang/Desktop/WM/WHManageApplication/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.4.0/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="548f06de403a9409f00554b3ee12a9fdea0e236c">
+        <dex dex="/Users/sang/Desktop/WM/WHManageApplication/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-appcompat-v7-23.4.0_c05fb6c10ece9605033116497cc9850309b0f66a/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/sang/Desktop/WM/WHManageApplication/app/build/intermediates/exploded-aar/com.android.support/support-v4/23.4.0/jars/libs/internal_impl-23.4.0.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="ea3c07504d2c8f4b13aa17c45c1b68ed9c1c3674">
+        <dex dex="/Users/sang/Desktop/WM/WHManageApplication/app/build/intermediates/transforms/dex/debug/folders/1000/10/internal_impl-23.4.0_0390989175db29cf81de03ae986fb0cb6c59ceee/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/sang/Library/Android/sdk/extras/android/m2repository/com/android/support/support-annotations/23.4.0/support-annotations-23.4.0.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="ffbe55fdb2bb456b1485831706a9eac3300bb6b8">
+        <dex dex="/Users/sang/Desktop/WM/WHManageApplication/app/build/intermediates/transforms/dex/debug/folders/1000/10/support-annotations-23.4.0_f19a1b62ca350640ef756137abe53841c979b60b/classes.dex" />
+    </item>
+
+</items>
