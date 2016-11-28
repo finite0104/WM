@@ -1,6 +1,8 @@
 package kr.deu.sw.lnp.whmanageapplication;
 
+import android.content.Context;
 import android.content.Intent;
+import android.media.AudioManager;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
@@ -28,6 +30,7 @@ public class MainActivity extends AppCompatActivity implements SpeechRecognizeLi
     Button b_warehousing,b_unstoring,b_search,b_setting;
     SpeechRecognizerClient client;
     SpeechRecognizerClient.Builder builder;
+    AudioManager am;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -55,6 +58,7 @@ public class MainActivity extends AppCompatActivity implements SpeechRecognizeLi
         client = builder.build();
         client.setSpeechRecognizeListener(this);
         client.startRecording(true);
+        am = (AudioManager) this.getSystemService(Context.AUDIO_SERVICE);
     }
 
     public void onClick(View v){
@@ -64,26 +68,22 @@ public class MainActivity extends AppCompatActivity implements SpeechRecognizeLi
                 Intent ware_Intent = new Intent("com.google.zxing.client.android.SCAN");
                 ware_Intent.putExtra("SCAN_MODE", "ALL");
                 startActivityForResult(ware_Intent, WAREHOUSING_REQUEST);
-                client.cancelRecording();
                 break;
             case R.id.b_unstoring :
                 //출고
                 Intent unsto_Intent = new Intent("com.google.zxing.client.android.SCAN");
                 unsto_Intent.putExtra("SCAN)MODE","ALL");
                 startActivityForResult(unsto_Intent, UNSTORING_REQUEST);
-                client.cancelRecording();
                 break;
             case R.id.b_search :
                 //검색
                 Intent info_Intent = new Intent(this, InfoActivity.class);
                 startActivity(info_Intent);
-                client.cancelRecording();
                 break;
             case R.id.b_setting :
                 //설정
                 Intent setting_Intent = new Intent(this, SettingsActivity.class);
                 startActivity(setting_Intent);
-                client.cancelRecording();
                 break;
         }
     }
@@ -170,22 +170,30 @@ public class MainActivity extends AppCompatActivity implements SpeechRecognizeLi
     @Override
     public void onResults(Bundle bundle) {
         ArrayList<String> texts =bundle.getStringArrayList(SpeechRecognizerClient.KEY_RECOGNITION_RESULTS);
-
-        if(texts.get(1).equals("입고")||texts.get(1).equals("입구")){
+        Log.d("result : ",texts.get(0));
+        if(texts.get(0).equals("입고")||texts.get(0).equals("입구")){
+            //client.stopRecording();
+            //am.setStreamVolume(AudioManager.STREAM_MUSIC,10,AudioManager.FLAG_PLAY_SOUND);
             b_warehousing.performClick();
-            client.cancelRecording();
         }
-        if(texts.get(1).equals("출고")) {
+        else if(texts.get(0).equals("출고")||texts.get(0).equals("출구")) {
+            //client.stopRecording();
+            //am.setStreamVolume(AudioManager.STREAM_MUSIC,10,AudioManager.FLAG_PLAY_SOUND);
             b_unstoring.performClick();
-            client.cancelRecording();
+
         }
-        if(texts.get(1).equals("재고")) {
+        else if(texts.get(0).equals("재고")) {
             b_search.performClick();
             client.cancelRecording();
+            am.setStreamVolume(AudioManager.STREAM_MUSIC,10,AudioManager.FLAG_PLAY_SOUND);
         }
-        if(texts.get(1).equals("설정")) {
+        else if(texts.get(0).equals("설정")) {
             b_setting.performClick();
             client.cancelRecording();
+            am.setStreamVolume(AudioManager.STREAM_MUSIC,10,AudioManager.FLAG_PLAY_SOUND);
+        }
+        else{
+            client.startRecording(true);
         }
     }
 

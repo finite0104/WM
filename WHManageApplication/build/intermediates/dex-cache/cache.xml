@@ -3,111 +3,111 @@
 
     <item
         is-multidex="true"
-        jar="/Users/sang/Desktop/WM/WHManageApplication/app/build/intermediates/exploded-aar/com.android.support/support-vector-drawable/23.4.0/jars/classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="25.0.0"
-        sha1="c2c594cace5d83a3227b2b6e658ecbfd586d3ed9">
-        <dex dex="/Users/sang/Desktop/WM/WHManageApplication/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-support-vector-drawable-23.4.0_99802e64ed4fe7c5b8bec931e5390b6e10d463d9/classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="/Users/sang/Desktop/WM/WHManageApplication/app/build/intermediates/exploded-aar/com.android.support/recyclerview-v7/23.4.0/jars/classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="25.0.0"
-        sha1="ec75036c3c52e451d0cde50a5aedaf5fd32354a0">
-        <dex dex="/Users/sang/Desktop/WM/WHManageApplication/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-recyclerview-v7-23.4.0_f5b2d9703239c762f5ca5da6ef728860f6fd14b9/classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="/Users/sang/Desktop/WM/WHManageApplication/app/build/intermediates/exploded-aar/WHManageApplication/daum-speech-openapi-4.0/unspecified/jars/libs/dialoid-apklib-0.9.2.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="25.0.0"
-        sha1="995013ca31e478180e74ae574ac92a3f487baca3">
-        <dex dex="/Users/sang/Desktop/WM/WHManageApplication/app/build/intermediates/transforms/dex/debug/folders/1000/8/dialoid-apklib-0.9.2_15bb05ac3ffc0b035a7c5ece7fdfea06b09b82d3/classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="/Users/sang/Desktop/WM/WHManageApplication/app/build/intermediates/exploded-aar/com.android.support/support-v4/23.4.0/jars/classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="25.0.0"
-        sha1="67bd36ee9340ec7c254108936ad16b24bed160cc">
-        <dex dex="/Users/sang/Desktop/WM/WHManageApplication/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-support-v4-23.4.0_f809eef881c7182febda610908d685f4f6328f4d/classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="/Users/sang/Desktop/WM/WHManageApplication/app/build/intermediates/incremental-runtime-classes/debug/instant-run.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="25.0.0"
-        sha1="3be5c90bfa91e6d24dfd4717cf43255ea045f919">
-        <dex dex="/Users/sang/Desktop/WM/WHManageApplication/app/build/intermediates/transforms/dex/debug/folders/1000/10/instant-run_77b31b003cf5adc379b7d86bac7a927b94d8557f/classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="/Users/sang/Desktop/WM/WHManageApplication/app/build/intermediates/incremental-classes/debug/instant-run-bootstrap.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="25.0.0"
-        sha1="87076d97c5fc0da18d9e7baba088fabc5bbed4ff">
-        <dex dex="/Users/sang/Desktop/WM/WHManageApplication/app/build/intermediates/transforms/dex/debug/folders/1000/10/instant-run-bootstrap_9ad638e474cff90d869f96a9ea1ba787bf36500c/classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="/Users/sang/Desktop/WM/WHManageApplication/app/libs/core-3.3.0.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="25.0.0"
-        sha1="73c49077166faa4c3c0059c5f583d1d7bd1475fe">
-        <dex dex="/Users/sang/Desktop/WM/WHManageApplication/app/build/intermediates/transforms/dex/debug/folders/1000/2/core-3.3.0_1ea0e509c7726a2384c0e1df8cab3971a89c181e/classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="/Users/sang/Desktop/WM/WHManageApplication/app/build/intermediates/exploded-aar/com.android.support/design/23.4.0/jars/classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="25.0.0"
-        sha1="5326d9a850d491714fef8cbfaa9ea3416f0bf0d2">
-        <dex dex="/Users/sang/Desktop/WM/WHManageApplication/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-design-23.4.0_0988a0006e6eb3654775dd4870d3d0be2f3637a0/classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="/Users/sang/Desktop/WM/WHManageApplication/app/build/intermediates/exploded-aar/com.android.support/animated-vector-drawable/23.4.0/jars/classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="25.0.0"
-        sha1="de4db3785756bfb0915a9f59a9b3f2fea7407be4">
-        <dex dex="/Users/sang/Desktop/WM/WHManageApplication/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-animated-vector-drawable-23.4.0_ee513da80a3364db8a51c25d04a351086e689d1c/classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="/Users/sang/Desktop/WM/WHManageApplication/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.4.0/jars/classes.jar"
+        jar="C:\Users\jaja_\Desktop\WM\WHManageApplication\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\23.4.0\jars\classes.jar"
         jumboMode="true"
         optimize="true"
         revision="25.0.0"
         sha1="548f06de403a9409f00554b3ee12a9fdea0e236c">
-        <dex dex="/Users/sang/Desktop/WM/WHManageApplication/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-appcompat-v7-23.4.0_c05fb6c10ece9605033116497cc9850309b0f66a/classes.dex" />
+        <dex dex="C:\Users\jaja_\Desktop\WM\WHManageApplication\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-appcompat-v7-23.4.0_e61724f7754318b3fed8a9ae0ff1866ec46c0799\classes.dex" />
     </item>
     <item
         is-multidex="true"
-        jar="/Users/sang/Desktop/WM/WHManageApplication/app/build/intermediates/exploded-aar/com.android.support/support-v4/23.4.0/jars/libs/internal_impl-23.4.0.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="25.0.0"
-        sha1="ea3c07504d2c8f4b13aa17c45c1b68ed9c1c3674">
-        <dex dex="/Users/sang/Desktop/WM/WHManageApplication/app/build/intermediates/transforms/dex/debug/folders/1000/10/internal_impl-23.4.0_0390989175db29cf81de03ae986fb0cb6c59ceee/classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="/Users/sang/Library/Android/sdk/extras/android/m2repository/com/android/support/support-annotations/23.4.0/support-annotations-23.4.0.jar"
+        jar="C:\Users\jaja_\AppData\Local\Android\sdk\extras\android\m2repository\com\android\support\support-annotations\23.4.0\support-annotations-23.4.0.jar"
         jumboMode="true"
         optimize="true"
         revision="25.0.0"
         sha1="ffbe55fdb2bb456b1485831706a9eac3300bb6b8">
-        <dex dex="/Users/sang/Desktop/WM/WHManageApplication/app/build/intermediates/transforms/dex/debug/folders/1000/10/support-annotations-23.4.0_f19a1b62ca350640ef756137abe53841c979b60b/classes.dex" />
+        <dex dex="C:\Users\jaja_\Desktop\WM\WHManageApplication\app\build\intermediates\transforms\dex\debug\folders\1000\10\support-annotations-23.4.0_fa394b3fe565823134f9ad607d9a8e372af22f58\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\jaja_\Desktop\WM\WHManageApplication\app\build\intermediates\exploded-aar\com.android.support\support-vector-drawable\23.4.0\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="c2c594cace5d83a3227b2b6e658ecbfd586d3ed9">
+        <dex dex="C:\Users\jaja_\Desktop\WM\WHManageApplication\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-support-vector-drawable-23.4.0_15583929932d4384ef86008ffc69e6bac7e6e8b5\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\jaja_\Desktop\WM\WHManageApplication\app\build\intermediates\exploded-aar\com.android.support\animated-vector-drawable\23.4.0\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="de4db3785756bfb0915a9f59a9b3f2fea7407be4">
+        <dex dex="C:\Users\jaja_\Desktop\WM\WHManageApplication\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-animated-vector-drawable-23.4.0_567e2531988282953a9430399d0a0261298e9497\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\jaja_\Desktop\WM\WHManageApplication\app\build\intermediates\exploded-aar\WHManageApplication\daum-speech-openapi-4.0\unspecified\jars\libs\dialoid-apklib-0.9.2.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="995013ca31e478180e74ae574ac92a3f487baca3">
+        <dex dex="C:\Users\jaja_\Desktop\WM\WHManageApplication\app\build\intermediates\transforms\dex\debug\folders\1000\8\dialoid-apklib-0.9.2_0d5927935b46045563d41232c0e73c1aa4ffe666\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\jaja_\Desktop\WM\WHManageApplication\app\build\intermediates\incremental-runtime-classes\debug\instant-run.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="0fe32840b10609d0b8c2232610b5bbd4f62078fe">
+        <dex dex="C:\Users\jaja_\Desktop\WM\WHManageApplication\app\build\intermediates\transforms\dex\debug\folders\1000\10\instant-run_b452e974ab6deb1c32c25528c0117f2c49be4647\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\jaja_\Desktop\WM\WHManageApplication\app\build\intermediates\exploded-aar\com.android.support\support-v4\23.4.0\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="67bd36ee9340ec7c254108936ad16b24bed160cc">
+        <dex dex="C:\Users\jaja_\Desktop\WM\WHManageApplication\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-support-v4-23.4.0_743034e6599e2dd8bf2ffa6f9e990998258b5f64\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\jaja_\Desktop\WM\WHManageApplication\app\build\intermediates\incremental-classes\debug\instant-run-bootstrap.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="39bb3c80abf99631d94c6c6797b1a31779b234af">
+        <dex dex="C:\Users\jaja_\Desktop\WM\WHManageApplication\app\build\intermediates\transforms\dex\debug\folders\1000\10\instant-run-bootstrap_2fa5453d7b4a069bc9e02069a010074295316cf3\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\jaja_\Desktop\WM\WHManageApplication\app\build\intermediates\exploded-aar\com.android.support\recyclerview-v7\23.4.0\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="ec75036c3c52e451d0cde50a5aedaf5fd32354a0">
+        <dex dex="C:\Users\jaja_\Desktop\WM\WHManageApplication\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-recyclerview-v7-23.4.0_a05d3617a675fef7d8363a905ba17d420220c71c\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\jaja_\Desktop\WM\WHManageApplication\app\build\intermediates\exploded-aar\com.android.support\design\23.4.0\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="5326d9a850d491714fef8cbfaa9ea3416f0bf0d2">
+        <dex dex="C:\Users\jaja_\Desktop\WM\WHManageApplication\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-design-23.4.0_ef86c04c2fdd86a96c101e894788b4903c9aefc2\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\jaja_\Desktop\WM\WHManageApplication\app\libs\core-3.3.0.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="73c49077166faa4c3c0059c5f583d1d7bd1475fe">
+        <dex dex="C:\Users\jaja_\Desktop\WM\WHManageApplication\app\build\intermediates\transforms\dex\debug\folders\1000\2\core-3.3.0_7526a5a3f511ab7806285b6fc3c7e0447197a06b\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\jaja_\Desktop\WM\WHManageApplication\app\build\intermediates\exploded-aar\com.android.support\support-v4\23.4.0\jars\libs\internal_impl-23.4.0.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="ea3c07504d2c8f4b13aa17c45c1b68ed9c1c3674">
+        <dex dex="C:\Users\jaja_\Desktop\WM\WHManageApplication\app\build\intermediates\transforms\dex\debug\folders\1000\10\internal_impl-23.4.0_ea2d9513d947154647b5110be4ed645a4aaabcb3\classes.dex" />
     </item>
 
 </items>
