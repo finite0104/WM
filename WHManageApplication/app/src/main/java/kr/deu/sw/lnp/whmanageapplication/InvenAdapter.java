@@ -45,20 +45,24 @@ public class InvenAdapter extends BaseAdapter {
         ViewHolder viewHolder;
         if(convertView == null) {
             //view가 null값을 가지고있을때만 새로 생성함
+            convertView = inflater.inflate(R.layout.list_item, null);
             viewHolder = new ViewHolder();
-
+            viewHolder.tvPname = (TextView)convertView.findViewById(R.id.tvPname);
+            viewHolder.tvAmount = (TextView)convertView.findViewById(R.id.tvAmount);
             convertView.setTag(viewHolder);
         }else{
             //view가 한번 만들어진 적 있는 경우에는 viewholder를 가져옴
             viewHolder = (ViewHolder)convertView.getTag();
         }
+        viewHolder.tvPname.setText(arrayList.get(position).getP_name());
+        viewHolder.tvAmount.setText("수량 : " + arrayList.get(position).getAmount());
 
         return convertView;
     }
 
     private class ViewHolder {
         //리스트 한 줄에 들어가는 뷰들을 저장하는 클래스
-        TextView tvPid;
         TextView tvPname;
+        TextView tvAmount;
     }
 }

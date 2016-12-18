@@ -1,22 +1,15 @@
 <?php
-$connect = mysql_connect("localhost:3306","아이디","비밀번호"); //id, password
-mysql_select_db("데이터베이스이름",$connect); //db name
+$connect = mysqli_connect("localhost:3306","cinderella","hell","cinderella"); //id, password
+mysqli_set_charset($connect, "utf8");  
 
-$selectSQL = "select * from 재고테이블"; //tablename
-
-mysql_query("set names utf8");
-$selectResult = mysql_query($selectSQL);
+$selectSQL = "select * from warehouse"; //tablename
+$selectResult = mysqli_query($connect, $selectSQL);
 $result = array();
 
-while($row = mysql_fetch_assoc($selectResult)){
-//    echo $row["p_id"];
-//    echo "/";
-//    echo $row["p_name"];
-//    echo "/";
-//    echo $row["amount"];
-//    echo "@";
-    array_push($result, array('p_id'=>$row[0], 'p_name'=>$row[1], 'amount'=>$row[2]));
+while($row = mysqli_fetch_assoc($selectResult)){
+    array_push($result, array('p_id'=>$row["p_id"], 'p_name'=>$row["p_name"], 'amount'=>$row["amount"]));
 }
-echo json_encode(array("result"=>$result));
-mysql_close($connect);
+$json = json_encode(array("result"=>$result));
+echo $json;
+mysqli_close($connect);
 ?>

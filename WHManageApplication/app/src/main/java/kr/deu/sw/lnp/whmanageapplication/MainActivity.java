@@ -85,8 +85,8 @@ public class MainActivity extends AppCompatActivity implements SpeechRecognizeLi
                 break;
             case R.id.b_search :
                 //검색
-                Intent info_Intent = new Intent(this, InfoActivity.class);
-                startActivity(info_Intent);
+                Intent inven_Intent = new Intent(this, InvenActivity.class);
+                startActivity(inven_Intent);
                 break;
             case R.id.b_setting :
                 //설정
@@ -108,7 +108,7 @@ public class MainActivity extends AppCompatActivity implements SpeechRecognizeLi
                     String p_id = p_data[0];
                     String p_name = p_data[1];
 
-                    dataInsert("https://sonagod.tk/data_select.php", p_id, p_name);
+                    dataInsert("https://sonagod.tk/warehousing.php", p_id, p_name);
                 }
                 break;
             case UNSTORING_REQUEST :
@@ -120,7 +120,7 @@ public class MainActivity extends AppCompatActivity implements SpeechRecognizeLi
                     String p_id = p_data[0];
                     String p_name = p_data[1];
 
-                    dataInsert("https://sonagod.tk/warehousing.php", p_id, p_name);
+                    dataInsert("https://sonagod.tk/unstoring.php", p_id, p_name);
                 }
                 break;
         }
@@ -237,18 +237,19 @@ public class MainActivity extends AppCompatActivity implements SpeechRecognizeLi
                         //연결시작되면
                         conn.setConnectTimeout(CONNECTION_TIME);
                         conn.setUseCaches(false);
-                        if (conn.getResponseCode() == HttpURLConnection.HTTP_OK) {
+                        //데이터 입력 후 전송
+                        OutputStream outputStream = conn.getOutputStream();
+                        outputStream.write(data.getBytes("UTF-8"));
+                        outputStream.flush();
+                        outputStream.close();
+                        //if (conn.getResponseCode() == HttpURLConnection.HTTP_OK) {
                             //연결 성공 시 실행
-                            OutputStream outputStream = conn.getOutputStream();
-                            outputStream.write(data.getBytes("UTF-8"));
-                            outputStream.flush();
-                            outputStream.close();
-                            //데이터 입력 후 전송
                             BufferedReader reader = new BufferedReader(new InputStreamReader(conn.getInputStream()));
                             result = reader.readLine();
+                            Log.w("result" , result);
                             //읽어온 데이터를 저장함
                             conn.disconnect();
-                        }
+                        //}
                     }
                     return result;
                 } catch (Exception e) {

@@ -1,7 +1,6 @@
 package kr.deu.sw.lnp.whmanageapplication;
 
 import android.app.ProgressDialog;
-import android.content.Intent;
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
@@ -9,7 +8,6 @@ import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.View;
-import android.widget.AdapterView;
 import android.widget.ListView;
 
 import org.json.JSONArray;
@@ -54,16 +52,6 @@ public class InvenActivity extends AppCompatActivity {
         arrayList = new ArrayList<>();
         adapter = new InvenAdapter(this, arrayList);
         listView.setAdapter(adapter);
-
-        listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
-            @Override
-            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-                Intent intent = new Intent(InvenActivity.this, InfoActivity.class);
-                intent.putExtra("inven", arrayList);
-                startActivity(intent);
-            }
-        });
-
         dataSelect("https://sonagod.tk/data_select.php");
     }
 
@@ -73,7 +61,6 @@ public class InvenActivity extends AppCompatActivity {
         try {
             JSONObject jsonObject = new JSONObject(phpData);
             JSONArray inven = jsonObject.getJSONArray(TAG_RESULT);
-
             for(int i=0;i<inven.length();i++) {
                 //재고 총 리스트 수 만큼 루프
                 JSONObject obj = inven.getJSONObject(i);
