@@ -108,7 +108,7 @@ public class MainActivity extends AppCompatActivity implements SpeechRecognizeLi
                     String p_id = p_data[0];
                     String p_name = p_data[1];
 
-                    dataInsert("http://sonagod.tk/data_select.php", p_id, p_name);
+                    dataInsert("https://sonagod.tk/data_select.php", p_id, p_name);
                 }
                 break;
             case UNSTORING_REQUEST :
@@ -120,7 +120,7 @@ public class MainActivity extends AppCompatActivity implements SpeechRecognizeLi
                     String p_id = p_data[0];
                     String p_name = p_data[1];
 
-                    dataInsert("http://sonagod.tk/warehousing.php", p_id, p_name);
+                    dataInsert("https://sonagod.tk/warehousing.php", p_id, p_name);
                 }
                 break;
         }

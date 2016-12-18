@@ -64,7 +64,7 @@ public class InvenActivity extends AppCompatActivity {
             }
         });
 
-        dataSelect("http://sonagod.tk/data_select.php");
+        dataSelect("https://sonagod.tk/data_select.php");
     }
 
     private void showList(String phpData) {
