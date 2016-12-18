@@ -5,6 +5,9 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
+import android.widget.TextView;
+
+import java.util.ArrayList;
 
 /**
  * Created by Admit on 2016-11-14.
@@ -13,23 +16,23 @@ public class InvenAdapter extends BaseAdapter {
 
     Context context = null;
     LayoutInflater inflater = null;
+    ArrayList<WHData> arrayList = null;
 
-    InvenAdapter(Context context) {
+    InvenAdapter(Context context, ArrayList<WHData> arrayList) {
         //리스트 입력받을 경우에 리스트도 저장함
         this.context = context;
         inflater = (LayoutInflater)context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
+        this.arrayList = arrayList;
     }
 
     @Override
     public int getCount() {
-        return 0;
-        //list.size()
+        return arrayList.size();
     }
 
     @Override
     public Object getItem(int position) {
-        return null;
-        //list.get(position);
+        return arrayList.get(position);
     }
 
     @Override
@@ -55,5 +58,7 @@ public class InvenAdapter extends BaseAdapter {
 
     private class ViewHolder {
         //리스트 한 줄에 들어가는 뷰들을 저장하는 클래스
+        TextView tvPid;
+        TextView tvPname;
     }
 }

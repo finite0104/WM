@@ -3,6 +3,7 @@ package kr.deu.sw.lnp.whmanageapplication;
 import android.content.Context;
 import android.content.Intent;
 import android.media.AudioManager;
+import android.os.AsyncTask;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
@@ -19,6 +20,11 @@ import net.daum.mf.speech.api.SpeechRecognizeListener;
 import net.daum.mf.speech.api.SpeechRecognizerClient;
 import net.daum.mf.speech.api.SpeechRecognizerManager;
 
+import java.io.BufferedReader;
+import java.io.InputStreamReader;
+import java.io.OutputStream;
+import java.net.HttpURLConnection;
+import java.net.URL;
 import java.util.ArrayList;
 
 public class MainActivity extends AppCompatActivity implements SpeechRecognizeListener{
@@ -26,6 +32,8 @@ public class MainActivity extends AppCompatActivity implements SpeechRecognizeLi
 
     private final static int WAREHOUSING_REQUEST = 0;
     private final static int UNSTORING_REQUEST = 1;
+    private static final int CONNECTION_TIME = 5000;
+
     String apikey;
     Button b_warehousing,b_unstoring,b_search,b_setting;
     SpeechRecognizerClient client;
@@ -72,7 +80,7 @@ public class MainActivity extends AppCompatActivity implements SpeechRecognizeLi
             case R.id.b_unstoring :
                 //출고
                 Intent unsto_Intent = new Intent("com.google.zxing.client.android.SCAN");
-                unsto_Intent.putExtra("SCAN)MODE","ALL");
+                unsto_Intent.putExtra("SCAN_MODE","ALL");
                 startActivityForResult(unsto_Intent, UNSTORING_REQUEST);
                 break;
             case R.id.b_search :
@@ -96,9 +104,11 @@ public class MainActivity extends AppCompatActivity implements SpeechRecognizeLi
                 //만약 데이터가 없을 경우 : 데이터가 없다는 Dialog 띄우기
                 if(resultCode == RESULT_OK) {
                     String content = data.getStringExtra("SCAN_RESULT");
-                    String format = data.getStringExtra("SCAN_RESULT_FORMAT");
+                    String[] p_data = content.split("/");
+                    String p_id = p_data[0];
+                    String p_name = p_data[1];
 
-                    Toast.makeText(MainActivity.this, content + "/" + format, Toast.LENGTH_SHORT).show();
+                    dataInsert("http://sonagod.tk/data_select.php", p_id, p_name);
                 }
                 break;
             case UNSTORING_REQUEST :
@@ -106,9 +116,11 @@ public class MainActivity extends AppCompatActivity implements SpeechRecognizeLi
                 //만약 데이터가 없을 경우 : 데이터가 없다는 Dialog 띄우기
                 if(resultCode == RESULT_OK) {
                     String content = data.getStringExtra("SCAN_RESULT");
-                    String format = data.getStringExtra("SCAN_RESULT_FORMAT");
+                    String[] p_data = content.split("/");
+                    String p_id = p_data[0];
+                    String p_name = p_data[1];
 
-                    Toast.makeText(MainActivity.this, content + "/" + format, Toast.LENGTH_SHORT).show();
+                    dataInsert("http://sonagod.tk/warehousing.php", p_id, p_name);
                 }
                 break;
         }
@@ -205,5 +217,53 @@ public class MainActivity extends AppCompatActivity implements SpeechRecognizeLi
     @Override
     public void onFinished() {
 
+    }
+
+    private void dataInsert(String url, String p_id, String p_name) {
+        class PHPInsert extends AsyncTask<String, Integer, String> {
+
+            @Override
+            protected String doInBackground(String... params) {
+                //파라미터 1 : url, 2 : p_id, 3 : p-name
+                String result = null;
+                String data = "p_id=" + params[1] + "&p_name=" + params[2];
+                try {
+                    URL url = new URL(params[0]);
+                    HttpURLConnection conn = (HttpURLConnection) url.openConnection();
+                    conn.setRequestMethod("POST");
+                    conn.setDoOutput(true);
+                    conn.setDoInput(true);
+                    if (conn != null) {
+                        //연결시작되면
+                        conn.setConnectTimeout(CONNECTION_TIME);
+                        conn.setUseCaches(false);
+                        if (conn.getResponseCode() == HttpURLConnection.HTTP_OK) {
+                            //연결 성공 시 실행
+                            OutputStream outputStream = conn.getOutputStream();
+                            outputStream.write(data.getBytes("UTF-8"));
+                            outputStream.flush();
+                            outputStream.close();
+                            //데이터 입력 후 전송
+                            BufferedReader reader = new BufferedReader(new InputStreamReader(conn.getInputStream()));
+                            result = reader.readLine();
+                            //읽어온 데이터를 저장함
+                            conn.disconnect();
+                        }
+                    }
+                    return result;
+                } catch (Exception e) {
+                    return null;
+                }
+            }
+
+            @Override
+            protected void onPostExecute(String s) {
+                super.onPostExecute(s);
+                Toast.makeText(MainActivity.this, s, Toast.LENGTH_SHORT).show();
+            }
+        }
+
+        PHPInsert phpInsert = new PHPInsert();
+        phpInsert.execute(url, p_id, p_name);
     }
 }

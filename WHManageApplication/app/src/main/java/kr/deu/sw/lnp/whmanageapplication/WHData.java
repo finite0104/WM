@@ -6,17 +6,17 @@ package kr.deu.sw.lnp.whmanageapplication;
 
 public class WHData {
     //창고 데이터베이스에서 사용하는 데이터
-    private String p_num;
+    private String p_id;
     private String p_name;
     private int amount;
 
-    WHData(String p_num, String p_name, int amount) {
-        this.p_num = p_num;
+    WHData(String p_id, String p_name, int amount) {
+        this.p_id = p_id;
         this.p_name = p_name;
         this.amount = amount;
     }
 
-    public String getP_num() {return p_num;}
+    public String getP_num() {return p_id;}
 
     public String getP_name() {return p_name;}
 

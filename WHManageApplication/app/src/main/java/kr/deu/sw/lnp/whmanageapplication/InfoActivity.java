@@ -9,6 +9,7 @@ import android.view.View;
 
 public class InfoActivity extends AppCompatActivity {
     //상품 정보 확인 화면
+    //ArrayList<WHData> 를 인텐트로 받아서 처리
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
